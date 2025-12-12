@@ -11,6 +11,7 @@ function MainLayout(props) {
 					<Navbar.Brand as={Link} to="/">Recipe App</Navbar.Brand>
 					<Nav className="me-auto">
 						<Nav.Link as={Link} to="/">Home</Nav.Link>
+						<Nav.Link as={Link} to="/favorites">Favorites</Nav.Link>
 					</Nav>
 				</Container>
 			</Navbar>
