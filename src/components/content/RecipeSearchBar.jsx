@@ -39,7 +39,7 @@ export const RecipeSearchBar = ({ onAddIngredient }) => {
     };
 
     return (
-        <div style={{ position: 'relative', maxWidth: 600 }} ref={inputRef}>
+        <div style={{ position: 'relative', maxWidth: 600, width: 400 }} ref={inputRef}>
             <Form autoComplete="off">
                 <FormControl
                     type="text"

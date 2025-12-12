@@ -10,7 +10,7 @@ const AREAS = [
 
 export const RecipeAreaDropdown = ({ selectedArea, onChange }) => (
 	<div style={{ margin: '16px 0' }}>
-		<label htmlFor="area-select" style={{ marginRight: 8 }}>Filter by Country:</label>
+		<label htmlFor="area-select" style={{ marginRight: 8 }}></label>
 		<select
 			id="area-select"
 			value={selectedArea || ''}

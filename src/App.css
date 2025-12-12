@@ -1,0 +1,28 @@
+
+/* Ingredient badge hover effect */
+.ingredient-badge-hover {
+	background-color: #dc3545 !important;
+	color: #fff !important;
+	transition: background 0.2s;
+}
+/* Center the Recipe Finder title */
+.centered-title {
+	text-align: center;
+	margin-top: 2rem;
+	margin-bottom: 2rem;
+}
+/* Center the search bar and dropdown side by side */
+.search-controls-row {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 1rem;
+	margin-bottom: 1.5rem;
+}
+
+/* Center the basket underneath */
+.basket-row {
+	display: flex;
+	justify-content: center;
+	margin-bottom: 2rem;
+}
