@@ -25,7 +25,6 @@ export const RecipeCard = ({ recipe }) => {
 				<Card.Body>
 					<Card.Title className="mb-1">{recipe.name}</Card.Title>
 					<div className="text-muted" style={{ fontSize: 14 }}>{recipe.category}</div>
-					<div className="text-muted" style={{ fontSize: 12 }}>ID: {recipe._id}</div>
 				</Card.Body>
 			</Link>
 			{flagSrc && (
