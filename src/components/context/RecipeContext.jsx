@@ -12,10 +12,10 @@ export const RecipeProvider = ({ children }) => {
 
   useEffect(() => {
     setLoading(true);
-    // fetch ingredients and recipes from the public folder
+    // fetch ingredients and recipes from the public folder (respect Vite base URL)
     Promise.all([
-      fetch('/p78/ingredients.json').then(res => res.json()),
-      fetch('/p78/recipes.json').then(res => res.json())
+      fetch(`${import.meta.env.BASE_URL}ingredients.json`).then(res => res.json()),
+      fetch(`${import.meta.env.BASE_URL}recipes.json`).then(res => res.json())
     ])
       .then(([ingData, recipesData]) => {
         setIngredients(Object.keys(ingData));

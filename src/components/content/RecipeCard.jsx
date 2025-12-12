@@ -13,7 +13,7 @@ export const RecipeCard = ({ recipe }) => {
 	let flagSrc = null;
 	if (recipe.area) {
 		const flagFile = recipe.area.replace(/ /g, '_').toLowerCase() + '.png';
-		flagSrc = `/flags/${flagFile}`;
+		flagSrc = `${import.meta.env.BASE_URL}flags/${flagFile}`;
 	}
 
 	return (

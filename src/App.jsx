@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { BrowserRouter, Route, Routes } from 'react-router';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import './App.css'
 import {HomePage} from './components/content/Home.jsx'
 import RecipePage from './components/content/RecipePage.jsx'
@@ -15,8 +15,8 @@ function App() {
 
   return (
       <RecipeProvider>
-        <BrowserRouter>
-          <Routes> 
+        <BrowserRouter basename={import.meta.env.BASE_URL}>
+          <Routes>
             <Route path="/" element={<MainLayout />}>
               <Route index element={<HomePage />} />
               <Route path="recipe-of-the-day" element={<RecipeOfTheDay />} />
