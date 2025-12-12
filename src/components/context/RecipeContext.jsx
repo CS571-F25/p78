@@ -14,8 +14,8 @@ export const RecipeProvider = ({ children }) => {
     setLoading(true);
     // fetch ingredients and recipes from the public folder
     Promise.all([
-      fetch('/ingredients.json').then(res => res.json()),
-      fetch('/recipes.json').then(res => res.json())
+      fetch('/p78/ingredients.json').then(res => res.json()),
+      fetch('/p78/recipes.json').then(res => res.json())
     ])
       .then(([ingData, recipesData]) => {
         setIngredients(Object.keys(ingData));
