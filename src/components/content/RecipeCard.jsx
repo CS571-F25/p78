@@ -17,13 +17,32 @@ export const RecipeCard = ({ recipe }) => {
 	}
 
 	return (
-		<Card className="h-100" style={{ background: bgColor }}>
-			<Link to={`/recipe/${recipe._id}`} style={{ textDecoration: 'none', color: 'inherit' }}>
+		<Card
+			className="h-100"
+			style={{
+				background: bgColor,
+				width: 240,
+				height: 320,
+				minWidth: 240,
+				position: 'relative',
+				display: 'flex',
+				flexDirection: 'column',
+			}}
+		>
+			<Link
+				to={`/recipe/${recipe._id}`}
+				style={{ textDecoration: 'none', color: 'inherit', display: 'block', height: '100%' }}
+			>
 				{recipe.thumbnail ? (
-					<Card.Img variant="top" src={recipe.thumbnail} alt={recipe.name} style={{ height: 150, objectFit: 'cover' }} />
+					<Card.Img
+						variant="top"
+						src={recipe.thumbnail}
+						alt={recipe.name}
+						style={{ height: 140, objectFit: 'cover' }}
+					/>
 				) : null}
-				<Card.Body>
-					<Card.Title className="mb-1">{recipe.name}</Card.Title>
+				<Card.Body style={{ display: 'flex', flexDirection: 'column', justifyContent: 'space-between', paddingBottom: 12, flex: '1 1 auto' }}>
+					<Card.Title className="mb-1" style={{ overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>{recipe.name}</Card.Title>
 					<div className="text-muted" style={{ fontSize: 14 }}>{recipe.category}</div>
 				</Card.Body>
 			</Link>
